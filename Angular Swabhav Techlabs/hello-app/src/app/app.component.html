@@ -1,0 +1,19 @@
+<!-- <h1>Event binding</h1>
+<h1>{{counter}}</h1>
+<button (click)="resetCounter()">Reset</button><br><br>
+<button (click)="incrementCounter()">Increment</button><br><br>
+<button (click)="decrementCounter()">Decrement</button> -->
+<!-- 
+<h1>Property Binding(one way binding)</h1> 
+<img alt = "item" height="300" width="200" [src]="phone"> -->
+
+<h2>Two way binding using Property and Event binding</h2>
+<input type="text" [value]="name" (input)="name=$any($event.target).value">
+<p> You entered {{name}}</p>
+<button (click)="clearName()">Clear</button>
+<br><br>
+
+<h2>Two way bindng using ngModel</h2>
+<input type="text" name="test" [(ngModel)]="test">
+<p> You entered {{test}}</p>
+<button (click)="clearText()">Clear</button>
