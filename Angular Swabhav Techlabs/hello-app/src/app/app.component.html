@@ -7,7 +7,7 @@
 <h1>Property Binding(one way binding)</h1> 
 <img alt = "item" height="300" width="200" [src]="phone"> -->
 
-<h2>Two way binding using Property and Event binding</h2>
+<!-- <h2>Two way binding using Property and Event binding</h2>
 <input type="text" [value]="name" (input)="name=$any($event.target).value">
 <p> You entered {{name}}</p>
 <button (click)="clearName()">Clear</button>
@@ -16,4 +16,95 @@
 <h2>Two way bindng using ngModel</h2>
 <input type="text" name="test" [(ngModel)]="test">
 <p> You entered {{test}}</p>
-<button (click)="clearText()">Clear</button>
+<button (click)="clearText()">Clear</button> -->
+
+<!-- <h2>Two way binding using id</h2>
+<input type ="text" placeholder="enter some text" name ="input" #box/>
+<br><br>
+<button (click)="getValue(box.value)">Submit</button>
+<p>{{paraDisplay}}</p> -->
+
+<!-- <h1>find sum</h1>
+<input type ="text" placeholder="Enter first number" #box1/><br><br>
+<input type ="text" placeholder="Enter Second number" #box2/><br><br>
+<button (click) ="getSum(box1.value,box2.value)">Add</button>
+<p>{{sumDisplay}}</p> -->
+
+<!-- <h1>Addition of two number using ngModel</h1>
+<input type="text" placeholder="Enter number 1"  [(ngModel)]="a"/>
+<p>+</p>
+<input type="text" placeholder="Enter number 2"  [(ngModel)]="b"/>
+
+<button (click)="calculateSum()" >Add</button>
+
+<p>{{sum}}</p> -->
+<!-- 
+<h1>ngFor</h1>
+<ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+ng-template helps to structure of code-->
+<!-- <div *ngIf = "show; else elseBlock">in ts file show variable is true</div>
+<ng-template #elseBlock>in ts file show variable is false</ng-template> -->
+
+<!-- <div *ngIf="show; then trueBlock else falseBlock"></div>
+<ng-template #trueBlock>
+    <h1>Content to render when condition is true</h1>
+</ng-template>
+<ng-template #falseBlock>
+    <h1>Content to render when condition is false</h1>
+</ng-template> -->
+
+<!-- <h1>If else ladder in angular</h1>
+<ng-template [ngIf]="color==='blue'">
+    <h1 style ="color:blue">Blue</h1>
+</ng-template>
+<ng-template [ngIf]="color==='red'">
+    <h1 style ="color:red">Red</h1>
+</ng-template>
+<ng-template [ngIf]="color==='yellow'">
+    <h1 style ="color:yellow">Yellow</h1>
+</ng-template> -->
+
+<!-- <h1>ng switch</h1>
+<div [ngSwitch]="color">
+    <h1 *ngSwitchCase ="'yellow'" style ="color:yellow">yellow using switch</h1>
+    <h1 *ngSwitchCase ="'red'" style ="color:red">red using switch</h1>
+    <h1 *ngSwitchDefault="'orange'" style="color:orange">orange using Switch</h1>
+</div> -->
+<!-- <h1>Table using ngFor using array of object</h1>
+<table border = "1">
+    <thead>
+        <th>Name</th>
+        <th>Matches</th>
+        <th>Runs</th>
+        <th>Country</th>
+    </thead>
+    <tr *ngFor ="let bat of topBatsmanDetails">
+        <td>{{bat.name}}</td>
+        <td>{{bat.matches}}</td>
+        <td>{{bat.runs}}</td>
+        <td>{{bat.country}}</td>
+    </tr>
+</table> -->
+
+<!-- <h1>nested for in array of objects </h1>
+<ul *ngFor ="let player of scoreDetails">
+    <li>{{player.name}}</li>
+    <li>{{player.matches}}</li>
+    <ul *ngFor ="let score of player.lastFiveInnings">
+        <li>{{score}}</li>
+    </ul>
+</ul> -->
+
+<table border = "1">
+    <thead>
+        <th>Name</th>
+        <th>Matches</th>
+        <th>Total Runs</th>
+        
+    </thead>
+    </table>
+
+
+
