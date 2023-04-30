@@ -1,0 +1,52 @@
+<p>user-form works!</p>
+
+<form [formGroup]="addUserForm">
+  <input type="text" formControlName="userName" class="form-control" />
+  <div
+    class="alert alert-danger"
+    *ngIf="
+      addUserForm.get('userName')?.touched &&
+      !addUserForm.get('userName')?.valid
+    "
+  >
+    <div *ngIf="addUserForm.get('userName')?.hasError('required')">
+      Username is required
+    </div>
+    <div *ngIf="addUserForm.get('userName')?.hasError('minlength')">
+      Length of the username should be atleast 3 characters
+    </div>
+    <div *ngIf="addUserForm.get('userName')?.hasError('maxlength')">
+      Length of the username should be not more than 10 characters
+    </div>
+    <div *ngIf="addUserForm.get('userName')?.hasError('pattern')">
+      Only characters allowed
+    </div>
+  </div>
+
+  <div class="form-group">
+    <br /><br />
+    <label for="email">email</label>
+    <input
+      formControlName="userEmail"
+      class="form-control"
+      id="email"
+      placeholder="Enter your email"
+     
+    />
+    <div
+    class="alert alert-danger"
+    *ngIf="
+      addUserForm.get('userEmail')?.touched &&
+      !addUserForm.get('userEmail')?.valid
+    "
+  >
+  <div *ngIf="addUserForm.get('userEmail')?.hasError('required')">
+    Username is required
+  </div>
+  <div *ngIf="addUserForm.get('userEmail')?.hasError('pattern')">
+    Only characters allowed
+  </div></div>
+  </div>
+  <button (click)="addUser()" class="btn btn-primary" [disabled]="!addUserForm.valid">Submit</button>
+  <button type="reset" class="btn btn-danger" (click)="resetUserForm()">Reset</button>
+</form>

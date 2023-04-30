@@ -7,6 +7,40 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   // phone ="../assets/phone.jpg";
+ item:string[]=[];
+ newTask:string='';
+ pipeTitle:string ='Angular pipes demo';
+ pipeArray:number[] =[1,2,3,4,5,6,7,8,9,10];
+ today :number = Date.now();
+ user ={name:'Sankalp', age:20, city :'Mumbai'};
+
+ addToList(){
+  if(this.newTask==''){
+  }
+  else{
+    this.item.push(this.newTask);
+    this.newTask='';
+  }
+ }
+
+ public deleteTask(index:number) {
+  this.item.splice(index, 1);
+}
+
+  fontColor:string="green";
+  bgColor:string="blue";
+
+  toggleColor(){
+    if(this.fontColor=="blue"){
+      this.fontColor="green";
+      this.bgColor="blue";
+    }
+    else{
+      this.fontColor="blue";
+      this.bgColor="green";
+    }
+  }
+
   items =["first","second","third"]
   color:string="red";
   show:boolean=false; // if the value is true then it will show content in div
@@ -23,6 +57,13 @@ export class AppComponent {
       {name:"Surya",matches:90,lastFiveInnings:[20,30,40,50,20]},
       {name:"Pant",matches:120,lastFiveInnings:[20,30,40,50,15]}
     ];
+
+    calculateTotalScore(scores:number[]):number{
+      let score = scores.reduce((acc,val)=>{
+        return acc+val;
+      },0)
+      return score;
+    }
   // sum=""
   // a=""
   // b=""

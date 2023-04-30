@@ -97,14 +97,49 @@ ng-template helps to structure of code-->
     </ul>
 </ul> -->
 
-<table border = "1">
-    <thead>
-        <th>Name</th>
-        <th>Matches</th>
-        <th>Total Runs</th>
-        
-    </thead>
-    </table>
+<!-- <h1>
+  Printing details in the array of objects without event binding using ngFor
+</h1>
+<table border="1">
+  <thead>
+    <th>Name</th>
+    <th>Matches</th>
+    <th>Total Runs</th>
+    <tr *ngFor="let bat of scoreDetails">
+      <td>{{ bat.name }}</td>
+      <td>{{ bat.matches }}</td>
+      <td>{{ calculateTotalScore(bat.lastFiveInnings) }}</td>
+    </tr>
+  </thead>
+</table> -->
 
+<!-- <div [style.color]="fontColor" [style.backgroundColor]="bgColor">Inside the div. Style Binding</div>
+<button (click) = "toggleColor()">Change color</button>
 
+<h1>ToDo's List</h1>
+<input [(ngModel)]="newTask" type = "text" value ="">
+<button (click)="addToList()">
+ADD TASK
+</button>
 
+<div *ngFor="let x of item; let index = index;">
+    <div>{{x}}<input (click)="deleteTask(index)" type="button" value="Delete"></div>
+
+</div> -->
+<!-- 
+<h1>Pipes Demo</h1>
+<h1>{{pipeTitle | uppercase }}</h1>
+<h1>{{pipeTitle | lowercase }}</h1>
+<h1>{{pipeTitle | titlecase }}</h1>
+<h1>{{pipeArray | slice: 1:3 }}</h1>
+
+<p>Date timestamp :{{today}}</p>
+<p>Date :{{today | date: "fullDate"}}</p>
+<p>Full Date :{{today | date: "shortDate"}}</p>
+<p>Formated Date :{{today | date: "dd/MM/yyyy"}}</p>
+<p>The time is:{{today | date: "h:mm a z"}}</p>
+<p>Full Date Wtih pipe chaining :{{today | date: "fullDate" | uppercase}}</p> -->
+
+<p>Printing objects with pipes</p>
+<P>{{user | json}}</P>
+<P>{{user | json | uppercase}}</P>
